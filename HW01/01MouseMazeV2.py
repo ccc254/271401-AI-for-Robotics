@@ -152,7 +152,7 @@ class PixelMazeAutoGame:
                 
                 # ตรวจสอบสถานะกำแพงรอบข้าง (ชนทิศไหนบ้าง)
                 collisions = self.check_surroundings(self.mouse_pos)
-                collision_str = ", ".join(collisions) if collisions else "ไม่มี"
+                collision_str = ",".join(collisions) if collisions else "ไม่มี"
                 
                 if len(path) > 1:
                     next_step = path[1]
@@ -160,7 +160,7 @@ class PixelMazeAutoGame:
                     move_dir = self.get_move_direction(self.mouse_pos, next_step)
                     
                     # ปริ้นสถานะการตัดสินใจ (Decision State) ลง Terminal
-                    print(f"🤖 [Decision State] พิกัดปัจจุบัน: {self.mouse_pos} | ชนกำแพงทิศ: [{collision_str}] -> ตัดสินใจเดิน: [{move_dir}] | ระยะเหลือ: {len(path)-1} ช่อง | ใช้เวลาคำนวณ: {calc_time*1000:.4f} ms")
+                    print(f"[Decision State] พิกัดปัจจุบัน:{self.mouse_pos} ชนกำแพงทิศ:[{collision_str}]->ตัดสินใจเดิน:[{move_dir}] ระยะเหลือ:{len(path)-1}ช่อง ใช้เวลาคำนวณ:{calc_time*1000:.4f}ms")
                     
                     # บันทึกการเดิน
                     self.mouse_pos = list(next_step)
