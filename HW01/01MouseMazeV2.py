@@ -35,7 +35,7 @@ class PixelMazeAutoGame:
 
     def load_map_from_json(self):
         """ โหลดแผนที่จากไฟล์ map.json """
-        json_file = "map01.json"
+        json_file = "HW01\map01.json"
         if not os.path.exists(json_file):
             raise FileNotFoundError(f"ไม่พบไฟล์ '{json_file}' กรุณาสร้างไฟล์ไว้ในโฟลเดอร์เดียวกันกับโค้ด Python")
         
